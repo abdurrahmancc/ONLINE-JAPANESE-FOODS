@@ -1,5 +1,5 @@
 # lucky_ones
-live website link [netlify link](https://github.com/facebook/create-react-app).
+live website link [netlify link](https://keen-frangipane-10233e.netlify.app/).
 
 
 # Getting Started with Create React App
