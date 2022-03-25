@@ -5,7 +5,7 @@ import React from "react";
 const Product = ({ product, selectedItems }) => {
   const { name, img, price, id } = product;
   return (
-    <div className="col-md-4 col-sm-6">
+    <div className="col-lg-4 col-sm-6">
       <div className="card shadow-sm p-2">
         <img src={img} alt="" />
         <h6 className="text-start pt-3">{name}</h6>

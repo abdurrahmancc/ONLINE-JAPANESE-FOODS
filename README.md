@@ -1,6 +1,10 @@
+# lucky_ones
+live website link [netlify link](https://github.com/facebook/create-react-app).
+
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://keen-frangipane-10233e.netlify.app/).
 
 ## Available Scripts
 

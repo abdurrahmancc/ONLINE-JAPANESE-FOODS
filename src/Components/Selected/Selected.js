@@ -4,6 +4,7 @@ import React from "react";
 
 const Selected = ({ product }) => {
   const { img, name } = product;
+  //   console.log(product);
   return (
     <div>
       <div className="text-start mx-4 p-3 d-flex justify-content-between">
