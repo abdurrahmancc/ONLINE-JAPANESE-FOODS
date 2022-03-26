@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Navbar } from "react-bootstrap";
 import Navber from "./Navber/Navber";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
       <Navber></Navber>
       <AllProduct></AllProduct>
       <Question></Question>
+      <Footer></Footer>
     </div>
   );
 }

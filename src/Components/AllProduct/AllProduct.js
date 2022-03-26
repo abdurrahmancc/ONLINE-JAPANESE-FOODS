@@ -21,8 +21,8 @@ const AllProduct = () => {
      select item remove
   ---------------------- */
   const selectItemRemove = (props) => {
-    const newItem = product.find((item) => item.id == props);
-    console.log(newItem);
+    const newItems = product.filter((item) => item.id !== props);
+    setproduct(newItems);
   };
 
   //   selectedItems
@@ -30,7 +30,7 @@ const AllProduct = () => {
     // const search = product.find((item) => item == props);
     // console.log(search);
     if (product.length <= 3) {
-      if (props != product.find((item) => item == props)) {
+      if (props !== product.find((item) => item === props)) {
         const newproduct = [...product, props];
         setproduct(newproduct);
         //   console.log(newproduct);
