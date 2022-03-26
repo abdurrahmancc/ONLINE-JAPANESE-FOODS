@@ -71,16 +71,18 @@ const AllProduct = () => {
         ------------------------------ */}
         <div className="col-md-4 col-sm-12  order-first order-md-last order-lg-last">
           <div
-            style={{ background: "#DCDCDC", height: "100vh", position: "sticky", top: "0px" }}
+            style={{ background: "#DCDCDC", position: "sticky", top: "0px" }}
             className="rounded rounded-3 pt-2"
           >
             <h4 className="text-center">Selected Items</h4>
+            <hr />
             <div>
               {product.map((item) => (
                 <Selected key={item.id} product={item}></Selected>
               ))}
             </div>
-            <div className="text-center mx-4 mt-4">
+            <hr />
+            <div className="text-center mx-4 mt-2">
               <button onClick={() => randomNumber()} className="btn btn-info p-1 me-2">
                 choose 1 for me
               </button>
