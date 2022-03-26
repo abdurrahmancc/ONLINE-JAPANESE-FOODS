@@ -1,4 +1,6 @@
 import { counter } from "@fortawesome/fontawesome-svg-core";
+import { faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Product from "../Products/Product";
 import Selected from "../Selected/Selected";
@@ -13,6 +15,7 @@ const AllProduct = () => {
       .then((data) => setProducts(data));
   }, []);
   console.log(product);
+  console.log(product.length);
 
   //   selectedItems
   const selectedItems = (props) => {
@@ -29,7 +32,7 @@ const AllProduct = () => {
 
   //   random Number create
   const randomNumber = () => {
-    const number = Math.floor(Math.random() * 12);
+    const number = product[Math.floor(Math.random() * product.length)];
     setRandomNumbers(number);
   };
   console.log(randomNumbers);
@@ -68,14 +71,19 @@ const AllProduct = () => {
               <button className="btn btn-info  mt-md-2 mt-lg-0 p-1">choose again</button>
               <div>
                 <div className="text-start mx-4 p-3 d-flex justify-content-between">
-                  <div>
-                    <img
-                      className="rounded-circle me-2 "
-                      style={{ width: "20px" }}
-                      src={product.img}
-                      alt=""
-                    />
-                    <span>{}</span>
+                  <div className="card shadow-sm p-2">
+                    <img src={randomNumbers.img} alt="" />
+                    <h6 className="text-start pt-3">{randomNumbers.name}</h6>
+                    <h6 className="text-start">price: {randomNumbers.price}</h6>
+                    <div className="text-end">
+                      <button onClick={() => selectedItems(product)} className="btn btn-primary ">
+                        Add to cart
+                        <FontAwesomeIcon
+                          className="ms-2 fa-sm"
+                          icon={faShoppingCart}
+                        ></FontAwesomeIcon>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
