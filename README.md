@@ -1,4 +1,4 @@
-# lucky_ones (assignment-8)
+# ONLINE JAPANESE FOODS (assignment-8)
 live website link [netlify link](https://keen-frangipane-10233e.netlify.app/).
 
 
