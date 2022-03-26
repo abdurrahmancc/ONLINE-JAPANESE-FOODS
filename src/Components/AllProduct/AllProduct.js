@@ -92,10 +92,13 @@ const AllProduct = () => {
                         button section
                 ---------------------------- */}
             <div className="text-center mx-4 mt-2">
-              <button onClick={() => randomNumber()} className="btn bg-color p-1 me-2">
+              <button onClick={() => randomNumber()} className="btn bg-color text-white p-1 me-2">
                 choose 1 for me
               </button>
-              <button onClick={chooseAgain} className="btn bg-color  mt-md-2 mt-lg-0 p-1">
+              <button
+                onClick={chooseAgain}
+                className="btn bg-color text-white  mt-md-2 mt-lg-0 p-1"
+              >
                 choose again
               </button>
 
