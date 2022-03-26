@@ -10,14 +10,21 @@ const AllProduct = () => {
   const [products, setProducts] = useState([]);
   const [product, setproduct] = useState([]);
   const [randomNumbers, setRandomNumbers] = useState(0);
-  const [disply, setDisplay] = useState("");
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-  console.log(product);
-  console.log(disply);
+  // console.log(product);
+
+  /* ----------------------
+     select item remove
+  ---------------------- */
+  const selectItemRemove = (props) => {
+    const newItem = product.find((item) => item.id == props);
+    console.log(newItem);
+  };
+
   //   selectedItems
   const selectedItems = (props) => {
     // const search = product.find((item) => item == props);
@@ -44,9 +51,11 @@ const AllProduct = () => {
       alert("You have no selected items");
     }
   };
-  console.log(product.length);
+  // console.log(product.length);
 
-  // choose again section
+  /* -----------------------------
+     choose again section
+  --------------------------- */
   const chooseAgain = () => {
     const empty = [];
     setproduct(empty);
@@ -70,18 +79,23 @@ const AllProduct = () => {
               selected section
         ------------------------------ */}
         <div className="col-md-4 col-sm-12  order-first order-md-last order-lg-last">
-          <div
-            style={{ background: "#DCDCDC", position: "sticky", top: "0px" }}
-            className="rounded rounded-3 pt-2"
-          >
+          <div className="rounded rounded-3 pt-4 selected-section">
             <h4 className="text-center">Selected Items</h4>
             <hr />
             <div>
               {product.map((item) => (
-                <Selected key={item.id} product={item}></Selected>
+                <Selected
+                  key={item.id}
+                  selectItemRemove={selectItemRemove}
+                  product={item}
+                ></Selected>
               ))}
             </div>
             <hr />
+
+            {/* ----------------------------
+                        button section
+                ---------------------------- */}
             <div className="text-center mx-4 mt-2">
               <button onClick={() => randomNumber()} className="btn btn-info p-1 me-2">
                 choose 1 for me
@@ -89,11 +103,15 @@ const AllProduct = () => {
               <button onClick={chooseAgain} className="btn btn-info  mt-md-2 mt-lg-0 p-1">
                 choose again
               </button>
+
+              {/* ----------------------------
+                        choose section
+                ---------------------------- */}
               <div>
                 <div className="text-start mx-4 p-3 d-flex justify-content-between ">
                   <div className="card  shadow-sm ">
+                    <h6 className=" text-center pt-3 ">{randomNumbers.name}</h6>
                     <img src={randomNumbers.img} alt="" />
-                    <h6 className=" text-start pt-3 ">{randomNumbers.name}</h6>
                   </div>
                 </div>
               </div>

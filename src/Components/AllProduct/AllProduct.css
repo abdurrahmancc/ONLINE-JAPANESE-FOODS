@@ -1,6 +1,9 @@
-.chooseProduct{
-    display: none;
-}
 hr{
-    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.selected-section{
+    background: #DCDCDC; 
+    position: sticky;
+    top: 0px;
 }

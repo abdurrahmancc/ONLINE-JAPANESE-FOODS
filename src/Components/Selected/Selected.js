@@ -2,7 +2,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const Selected = ({ product }) => {
+const Selected = ({ product, selectItemRemove }) => {
   const { img, name } = product;
   //   console.log(product);
   return (
@@ -13,7 +13,12 @@ const Selected = ({ product }) => {
           <span>{name}</span>
         </div>
         <div>
-          <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+          <button
+            onClick={() => selectItemRemove(product.id)}
+            className=" rounded-circle border-0 "
+          >
+            <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+          </button>
         </div>
       </div>
     </div>
