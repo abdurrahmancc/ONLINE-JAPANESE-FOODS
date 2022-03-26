@@ -8,7 +8,10 @@ hr{
     top: 90px;
 }
 .title-color{
-    /* color: orange; */
+
     font-weight: 700;
     margin-top: 100px;
+}
+.bg-color{
+    background-color: #7BAB0A;
 }

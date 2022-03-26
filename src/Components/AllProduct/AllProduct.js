@@ -15,7 +15,6 @@ const AllProduct = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-  // console.log(product);
 
   /* ----------------------
      select item remove
@@ -27,13 +26,10 @@ const AllProduct = () => {
 
   //   selectedItems
   const selectedItems = (props) => {
-    // const search = product.find((item) => item == props);
-    // console.log(search);
     if (product.length <= 3) {
       if (props !== product.find((item) => item === props)) {
         const newproduct = [...product, props];
         setproduct(newproduct);
-        //   console.log(newproduct);
       } else {
         alert("all ready added");
       }
@@ -51,7 +47,6 @@ const AllProduct = () => {
       alert("You have no selected items");
     }
   };
-  // console.log(product.length);
 
   /* -----------------------------
      choose again section
@@ -97,10 +92,10 @@ const AllProduct = () => {
                         button section
                 ---------------------------- */}
             <div className="text-center mx-4 mt-2">
-              <button onClick={() => randomNumber()} className="btn btn-info p-1 me-2">
+              <button onClick={() => randomNumber()} className="btn bg-color p-1 me-2">
                 choose 1 for me
               </button>
-              <button onClick={chooseAgain} className="btn btn-info  mt-md-2 mt-lg-0 p-1">
+              <button onClick={chooseAgain} className="btn bg-color  mt-md-2 mt-lg-0 p-1">
                 choose again
               </button>
 
