@@ -73,7 +73,7 @@ const AllProduct = () => {
         {/* -----------------------------
               selected section
         ------------------------------ */}
-        <div className="col-md-4 col-sm-12  order-first order-md-last order-lg-last">
+        <div className="col-md-4 col-sm-12 mb-5 mb-lg-0 order-first order-md-last order-lg-last">
           <div className="rounded rounded-3 pt-4 selected-section">
             <h4 className="text-center">Selected Items</h4>
             <hr />
