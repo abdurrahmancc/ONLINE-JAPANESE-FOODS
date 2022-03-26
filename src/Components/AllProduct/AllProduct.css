@@ -5,5 +5,10 @@ hr{
 .selected-section{
     background: #DCDCDC; 
     position: sticky;
-    top: 0px;
+    top: 90px;
+}
+.title-color{
+    /* color: orange; */
+    font-weight: 700;
+    margin-top: 100px;
 }

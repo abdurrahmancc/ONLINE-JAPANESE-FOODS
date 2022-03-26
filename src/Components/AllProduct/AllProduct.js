@@ -38,7 +38,7 @@ const AllProduct = () => {
         alert("all ready added");
       }
     } else {
-      alert("");
+      alert("your 4 itmes added");
     }
   };
 
@@ -63,7 +63,7 @@ const AllProduct = () => {
   };
   return (
     <div className="container">
-      <h1 className="text-primary mb-5">ONLINE JAPANESE FOODS</h1>
+      <h1 className=" title-color text-primary mb-5">ONLINE JAPANESE FOODS</h1>
       <div className="row">
         <div className="col-md-8 col-sm-12 order-last order-md-first order-lg-first">
           <div className="">
